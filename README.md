@@ -18,4 +18,5 @@
 - [Лицензия Pexels](https://www.pexels.com/license/). Люди на стоковых фото не представлены как реальные сотрудники или клиенты агентства.
 - Geologica: SIL OFL 1.1, лицензия в assets/fonts/OFL-Geologica.txt.
 - Lenis 1.3.27: MIT, лицензия в assets/vendor/lenis/LICENSE.
+- Шапка, подвал, PT Sans, логотипы, значки и компонент HystModal перенесены с основного сайта агентства с сохранением оформления и ссылок.
 - Сведения об агентстве и логотипы страховщиков: [sa-progress.ru](https://sa-progress.ru/).

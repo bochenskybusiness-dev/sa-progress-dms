@@ -3,9 +3,10 @@
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   const root=document.documentElement;
   let scroller=null;
+  const componentLocks=new Set();
 
   function syncDialogs(){
-    const open=Boolean(document.querySelector('dialog[open]'));
+    const open=Boolean(document.querySelector('dialog[open]'))||componentLocks.size>0;
     root.classList.toggle('has-open-dialog',open);
     if(open)scroller?.stop();
     else scroller?.start();
@@ -42,7 +43,10 @@
       window.scrollTo({top,behavior:immediate||reducedMotion.matches?'instant':'smooth'});
     }
   }
-  window.pageScroll={to,refresh};
+  window.pageScroll={to,refresh,setLock:(key,locked)=>{
+    if(locked)componentLocks.add(key);else componentLocks.delete(key);
+    syncDialogs();
+  }};
   document.querySelectorAll('dialog').forEach(dialog=>{
     dialog.setAttribute('data-lenis-prevent','');
     new MutationObserver(syncDialogs).observe(dialog,{attributes:true,attributeFilter:['open']});

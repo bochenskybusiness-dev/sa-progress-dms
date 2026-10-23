@@ -1,6 +1,10 @@
 const demoDialog=document.querySelector('#demo-dialog');
 const leadDialog=document.querySelector('#lead-dialog');
 let returnFocus=null;
+document.addEventListener('open-demo-notice',event=>{
+  returnFocus=event.detail?.opener||null;
+  demoDialog.showModal();
+});
 
 function setError(input,message){
   input.setAttribute('aria-invalid',String(Boolean(message)));
