@@ -13,7 +13,7 @@
 
 ## Источники и лицензии
 
-- Первый экран: [cottonbro studio / Pexels](https://www.pexels.com/photo/businessmen-in-a-meeting-6814344/).
+- Первый экран: [Vitaly Gariev / Unsplash](https://unsplash.com/photos/doctor-consults-with-patient-in-medical-office-iyeUwItlIPk), [лицензия Unsplash](https://unsplash.com/license).
 - Медицинская консультация: [Antoni Shkraba / Pexels](https://www.pexels.com/photo/a-patient-having-a-consultation-with-her-doctor-5214997/).
 - [Лицензия Pexels](https://www.pexels.com/license/). Люди на стоковых фото не представлены как реальные сотрудники или клиенты агентства.
 - Geologica: SIL OFL 1.1, лицензия в assets/fonts/OFL-Geologica.txt.

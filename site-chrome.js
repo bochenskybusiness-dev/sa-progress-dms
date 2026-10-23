@@ -6,8 +6,6 @@
   const menuButton=header.querySelector('.js-open-mobile-menu');
   const desktopMenu=header.querySelector('.desktop-menu');
   const canvas=document.querySelector('.review-canvas');
-  const backToTop=header.querySelector('.js-go-to-top-btn');
-  const floating=header.querySelector('.float-messengers-buttons');
   document.body.append(modals);
   header.querySelectorAll('.c-mobile-menu,.mobile-menu__inner').forEach(e=>e.setAttribute('data-lenis-prevent',''));
   modals.querySelectorAll('.hystmodal').forEach(e=>e.setAttribute('data-lenis-prevent',''));
@@ -128,10 +126,7 @@
     originalModal.close();
   });
 
-  keyboardButton(backToTop,'Наверх');
-  backToTop.addEventListener('click',()=>window.pageScroll?.to(0));
   let frame=0;
-  let floatingBottom=189,topButtonBottom=50;
   function measureFixed(){
     // The original site reserves this space in its main wrapper when the menu
     // becomes fixed. Preserve the same flow without shifting the landing page.
@@ -140,19 +135,11 @@
     header.style.minHeight='';
     header.style.minHeight=getComputedStyle(header.querySelector('header')).height;
     header.classList.toggle('fixed-state',wasFixed);
-    if(canvas){
-      for(const element of [floating,backToTop]){
-        element.style.top='';element.style.bottom='';
-      }
-      floatingBottom=parseFloat(getComputedStyle(floating).bottom)||189;
-      topButtonBottom=parseFloat(getComputedStyle(backToTop).bottom)||50;
-    }
     scheduleFixed();
   }
   function updateFixedElements(){
     frame=0;
     header.classList.toggle('fixed-state',window.scrollY>=100);
-    backToTop.classList.toggle('js-hidden',window.scrollY<=window.innerHeight+400);
     if(!canvas)return;
     const rect=canvas.getBoundingClientRect();
     const scale=rect.width/canvas.offsetWidth;
@@ -164,10 +151,6 @@
       element.style.top=((mobileOrigin-rect.top)/scale+60)+'px';
       element.style.height=Math.max(0,(window.innerHeight-mobileOrigin)/scale-60)+'px';
     });
-    for(const [element,bottom] of [[floating,floatingBottom],[backToTop,topButtonBottom]]){
-      element.style.bottom='auto';
-      element.style.top=((window.innerHeight-rect.top)/scale-bottom-element.offsetHeight)+'px';
-    }
   }
   function scheduleFixed(){if(!frame)frame=requestAnimationFrame(updateFixedElements);}
   window.addEventListener('scroll',scheduleFixed,{passive:true});

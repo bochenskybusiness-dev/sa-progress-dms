@@ -49,29 +49,6 @@ document.querySelectorAll('dialog').forEach(dialog=>{
   });
 });
 
-const tabs=[...document.querySelectorAll('.audience-tab')];
-function selectAudience(button){
-  tabs.forEach(tab=>{
-    const selected=tab===button;
-    tab.classList.toggle('is-active',selected);
-    tab.setAttribute('aria-selected',String(selected));
-    tab.tabIndex=selected?0:-1;
-    document.getElementById(tab.getAttribute('aria-controls')).hidden=!selected;
-  });
-}
-tabs.forEach((tab,index)=>{
-  tab.addEventListener('click',()=>selectAudience(tab));
-  tab.addEventListener('keydown',event=>{
-    let next=index;
-    if(['ArrowDown','ArrowRight'].includes(event.key))next=(index+1)%tabs.length;
-    else if(['ArrowUp','ArrowLeft'].includes(event.key))next=(index+tabs.length-1)%tabs.length;
-    else if(event.key==='Home')next=0;
-    else if(event.key==='End')next=tabs.length-1;
-    else return;
-    event.preventDefault();selectAudience(tabs[next]);tabs[next].focus();
-  });
-});
-
 const serviceInputs=[...document.querySelectorAll('.service-choices input')];
 function chosenServices(){return serviceInputs.filter(input=>input.checked).map(input=>input.value);}
 function updateServiceCount(){document.querySelector('#service-count').textContent='Выбрано: '+chosenServices().length;}
@@ -154,4 +131,35 @@ document.querySelector('.article-collapse').addEventListener('click',()=>setArti
 document.querySelectorAll('details[name]').forEach(details=>details.addEventListener('toggle',()=>{
   if(details.open)document.querySelectorAll(`details[name="${details.name}"]`).forEach(other=>{if(other!==details)other.open=false;});
 }));
+
+// Use rendered coordinates so the CTA and the card also align in scaled reviews.
+const heroForm=document.querySelector('#hero-form');
+const heroVisual=document.querySelector('.hero-visual');
+const heroCard=document.querySelector('.free-card');
+let heroAlignmentFrame=0;
+function alignHeroCard(){
+  heroAlignmentFrame=0;
+  if(getComputedStyle(heroForm).display==='none'){
+    heroVisual.style.removeProperty('--hero-cta-top');
+    heroVisual.style.removeProperty('--hero-card-end');
+    return;
+  }
+  const visual=heroVisual.getBoundingClientRect();
+  const button=heroForm.querySelector('button').getBoundingClientRect();
+  const reviewCanvas=heroVisual.closest('.review-canvas');
+  const scale=reviewCanvas?reviewCanvas.getBoundingClientRect().width/reviewCanvas.offsetWidth:1;
+  const top=Math.max(0,(button.top-visual.top)/scale);
+  const end=top+heroCard.offsetHeight+28;
+  heroVisual.style.setProperty('--hero-cta-top',top.toFixed(2)+'px');
+  heroVisual.style.setProperty('--hero-card-end',end.toFixed(2)+'px');
+}
+function scheduleHeroAlignment(){if(!heroAlignmentFrame)heroAlignmentFrame=requestAnimationFrame(alignHeroCard);}
+const heroObserver=new ResizeObserver(scheduleHeroAlignment);
+heroObserver.observe(document.querySelector('.hero-copy'));
+heroObserver.observe(heroForm);
+heroObserver.observe(heroCard);
+window.addEventListener('resize',scheduleHeroAlignment);
+document.fonts.ready.then(scheduleHeroAlignment);
+document.querySelector('#review-scale')?.addEventListener('click',scheduleHeroAlignment);
+scheduleHeroAlignment();
 
