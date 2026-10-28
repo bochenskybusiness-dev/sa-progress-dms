@@ -9,13 +9,13 @@
   <title>ДМС для вашей команды — Прогресс Страхование</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./assets/fonts/Geologica-Variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=e87f37bea617">
-  <link rel="stylesheet" href="./assets/vendor/lenis/lenis.css?v=e87f37bea617">
-  <script src="./assets/vendor/lenis/lenis.min.js?v=e87f37bea617" defer></script>
-  <script src="./scroll.js?v=e87f37bea617" defer></script>
-  <script src="./app.js?v=e87f37bea617" defer></script>
-  <script src="./assets/vendor/hystmodal/hystmodal.js?v=e87f37bea617" defer></script>
-  <script src="./site-chrome.js?v=e87f37bea617" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=c7bc6a3e8c2a">
+  <link rel="stylesheet" href="./assets/vendor/lenis/lenis.css?v=c7bc6a3e8c2a">
+  <script src="./assets/vendor/lenis/lenis.min.js?v=c7bc6a3e8c2a" defer></script>
+  <script src="./scroll.js?v=c7bc6a3e8c2a" defer></script>
+  <script src="./app.js?v=c7bc6a3e8c2a" defer></script>
+  <script src="./assets/vendor/hystmodal/hystmodal.js?v=c7bc6a3e8c2a" defer></script>
+  <script src="./site-chrome.js?v=c7bc6a3e8c2a" defer></script>
 </head>
 <body>
   <div class="source-chrome source-chrome-header"><header class="header">
@@ -844,9 +844,9 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>ДМС для юридических лиц</div>
         <h1 id="hero-title">ДМС, которое<br>подходит вашей<br><span>команде</span></h1>
-        <p class="hero-lead">Бесплатно подберём полис под задачи и бюджет бизнеса. Поможем с оформлением и будем с вами весь срок действия ДМС.</p>
-        <p class="hero-service-note"><strong>Бесплатно</strong><span>подбор и сопровождение</span></p>
-        <form class="hero-form" id="hero-form" data-lead-form novalidate>
+        <p class="hero-lead"><strong>Бесплатно</strong> подберём полис под задачи и бюджет бизнеса. Поможем с оформлением и будем с вами весь срок действия ДМС.</p>
+        <form class="hero-form" id="hero-form" data-lead-form novalidate aria-labelledby="hero-form-title">
+          <div class="hero-form-intro"><h2 id="hero-form-title">Получите предложения по ДМС</h2><p>Оставьте имя и телефон — обсудим задачи и бюджет.</p></div>
           <div class="form-row">
             <label class="field"><span>Ваше имя</span><input name="name" id="hero-name" autocomplete="given-name" placeholder="Например, Анна" required maxlength="80" aria-describedby="name-error"><small class="field-error" id="name-error"></small></label>
             <label class="field"><span>Телефон</span><input name="phone" id="hero-phone" autocomplete="tel" inputmode="tel" type="tel" placeholder="+7 999 123-45-67" required maxlength="22" aria-describedby="phone-error"><small class="field-error" id="phone-error"></small></label>
@@ -859,29 +859,23 @@
         </div>
       </div>
       <div class="hero-visual">
-        <figure class="hero-photo"><img src="./assets/images/business-insurance-composition.png" alt="Композиция о страховании бизнеса: портфель, экран с логотипом Прогресса, защитный щит и калькулятор" width="1583" height="993" fetchpriority="high"></figure>
+        <figure class="hero-photo"><img src="./assets/images/dms-medical-care.png" alt="Медицинский полис, стетоскоп и щит со знаком защиты" width="1254" height="1254" fetchpriority="high"></figure>
       </div>
       <dl class="hero-proof" aria-label="Об агентстве">
-        <div class="proof-fact"><dt>с 2014 года</dt><dd>помогаем выбирать<br>страхование</dd></div>
-        <div class="proof-fact"><dt>25+ компаний</dt><dd>в партнёрской<br>сети агентства</dd></div>
-        <div class="proof-fact"><dt>Весь срок ДМС</dt><dd>сопровождаем<br>вашу компанию</dd></div>
+        <div class="proof-fact"><dt><span class="proof-prefix">с</span> 2014</dt><dd>помогаем выбирать<br>страхование</dd></div>
+        <div class="proof-fact"><dt>25<span class="proof-plus">+</span></dt><dd>страховых компаний<br>в партнёрской сети</dd></div>
+        <div class="proof-fact"><dt class="proof-duration">Весь срок<br>ДМС</dt><dd>сопровождаем<br>вашу компанию</dd></div>
       </dl>
     </section>
     <section class="section audience-section" id="for-whom" aria-labelledby="audience-title" data-section="2">
-  <div class="section-heading benefits-heading">
-    <div><span class="section-kicker"><span class="kicker-index">01</span><span>Выгоды ДМС</span></span><h2 id="audience-title">Забота о команде.<br> Преимущества для бизнеса</h2></div>
-    <p class="section-intro">ДМС дополняет соцпакет, помогает заботиться о сотрудниках и планировать расходы на их здоровье.</p>
+  <div class="section-heading benefits-heading"><div><span class="section-kicker"><span class="kicker-index">01</span><span>Выгоды ДМС</span></span><h2 id="audience-title">Преимущества ДМС<br> для компании и сотрудников</h2></div><p class="section-intro">Соцпакет, медицинская помощь и понятный бюджет — с программой под задачи вашей команды.</p></div>
+  <div class="benefits-grid">
+    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><span class="benefits-audience">Для бизнеса и HR</span></div><h3>Сильнее соцпакет</h3><p>ДМС дополняет предложение работодателя, помогает привлекать специалистов и поддерживать лояльность команды.</p></article>
+    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h13v4M3 7h17v14H5a2 2 0 0 1-2-2V7Zm17 5h-5v5h5M17 14.5h.01"/></svg></span><span class="benefits-audience">Для компании</span></div><h3>Управляемый бюджет</h3><p>Выбираете состав услуг и уровень клиник под свои задачи. Стоимость программы известна до оформления.</p></article>
+    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a4 4 0 0 0 8 0V3M4 3h4M12 3h4M10 13v3a5 5 0 0 0 10 0v-3"/><circle cx="20" cy="11" r="2"/></svg></span><span class="benefits-audience">Для сотрудников</span></div><h3>Помощь в удобных клиниках</h3><p>Врачи, анализы и диагностика рядом с работой или домом. Запись через сервисы страховщика; услуги в рамках полиса оплачивает страховая.</p></article>
+    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 19 12-14"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><span class="benefits-audience">Для финансовой службы</span></div><h3>Налоговые возможности</h3><p>Учёт расходов на ДМС и освобождение от страховых взносов — при соблюдении условий договора и НК РФ.</p></article>
   </div>
-  <div class="benefit-grid">
-    <article class="benefit-card"><div class="benefit-label">Для бизнеса <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V3h12v18M16 11h4v10M2 21h20M8 7h4M8 11h4M8 15h4M9 21v-3h2v3"/></svg></div><h3>Сильнее предложение<br> работодателя</h3><p>ДМС — дополнительный аргумент при найме и повод для сотрудников оставаться в команде.</p><details class="benefit-details"><summary aria-label="Подробнее о выгодах для бизнеса">Подробнее<span class="disclosure-mark" aria-hidden="true"></span></summary><ul class="clean-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Программа под бюджет компании</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Стоимость и состав услуг известны до оформления</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Налоговый учёт расходов при соблюдении условий</li></ul></details></article>
-    <article class="benefit-card"><div class="benefit-label">Для HR и руководителей <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z M14 2v5h5M8 12h8M8 16h6"/></svg></div><h3>Меньше рутины<br> при работе с ДМС</h3><p>Берём на себя поиск и сравнение предложений, помогаем с подключением и сопровождением договора.</p><details class="benefit-details"><summary aria-label="Подробнее о выгодах для HR и руководителей">Подробнее<span class="disclosure-mark" aria-hidden="true"></span></summary><ul class="clean-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Один менеджер по вопросам ДМС</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Помощь с изменениями списка сотрудников</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Поддержка при продлении и спорных ситуациях</li></ul></details></article>
-    <article class="benefit-card"><div class="benefit-label">Для сотрудников <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a4 4 0 0 0 8 0V3M4 3h4M12 3h4M10 13v3a5 5 0 0 0 10 0v-3"/><circle cx="20" cy="11" r="2"/></svg></div><h3>Медицинская помощь<br> в удобных клиниках</h3><p>Приёмы врачей, анализы и диагностика по программе — с понятным порядком обращения.</p><details class="benefit-details"><summary aria-label="Подробнее о выгодах для сотрудников">Подробнее<span class="disclosure-mark" aria-hidden="true"></span></summary><ul class="clean-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Клиники рядом с работой или домом</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Запись через сервисы страховщика</li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Услуги в рамках полиса оплачивает страховая</li></ul></details></article>
-  </div>
-  <div class="tax-benefits" aria-labelledby="tax-title">
-    <div class="tax-heading"><span class="benefit-label">Для финансовой службы</span><h3 id="tax-title">ДМС и налоги</h3></div>
-    <div class="tax-item"><strong>До 6%</strong><h4>от расходов на оплату труда</h4><span class="tax-limit-note">Совокупный лимит учёта</span></div>
-    <div class="tax-item"><strong>Без страховых взносов</strong><h4>при договоре от одного года</h4></div>
-    <details class="tax-details"><summary>Условия налогового учёта <span class="disclosure-mark" aria-hidden="true"></span></summary><div>
+  <div class="benefits-tax"><details class="tax-details"><summary><span><strong>ДМС и налоги</strong><span class="tax-summary-copy">До 6% расходов на оплату труда — совокупный лимит учёта</span></span><span class="tax-summary-action">Условия и основания<span class="disclosure-mark" aria-hidden="true"></span></span></summary><div>
       <p>Для работодателей, которые учитывают расходы при расчёте налога на прибыль.</p>
       <p>Общий лимит, в пределах которого можно учесть взносы по ДМС вместе с другими расходами, указанными в НК РФ.</p>
       <p>Взносы работодателя по ДМС освобождаются от страховых взносов при соблюдении условий. Важен срок страхования каждого сотрудника.</p>
@@ -889,9 +883,9 @@
       <p>Лимит 6% общий: он включает взносы по ДМС, предусмотренные НК РФ договоры на медицинские услуги и расходы из пункта 24.2 статьи 255. Это лимит учитываемых расходов, а не размер экономии на налоге.</p>
       <p>Если страхование работника прекращается раньше года или новый сотрудник включён на срок менее года, освобождение от страховых взносов может не применяться. Итоговый учёт зависит от условий договора и налогового режима компании.</p>
       <p class="tax-sources">Основания: <a href="https://www.consultant.ru/document/cons_doc_LAW_28165/7b1ea255e5f4f1ac2bb055d2d61a28b4a03f6856/" target="_blank" rel="noopener">ст. 255, п. 16 НК РФ</a>; <a href="https://www.consultant.ru/document/cons_doc_LAW_28165/30e4690deae106140c96017db18054a3175e14f6/" target="_blank" rel="noopener">ст. 422, п. 1, подп. 5 НК РФ</a>; <a href="https://www.nalog.gov.ru/rn77/news/activities_fts/15685469/" target="_blank" rel="noopener">разъяснение ФНС о сроке страхования</a>.</p>
-    </div></details>
-  </div>
+    </div></details></div>
 </section>
+
 
 <section class="section coverage-section" id="coverage" aria-labelledby="coverage-title" data-section="3">
   <div class="section-heading"><div><span class="section-kicker"><span class="kicker-index">02</span><span>Что входит в ДМС</span></span><h2 id="coverage-title">Медицинская помощь,<br> которая нужна вашим людям</h2></div><p class="section-intro">Состав программы выбираем вместе. Каждый вид помощи, список клиник и ограничения проверяем до оформления.</p></div>
@@ -928,9 +922,15 @@
 </section>
 
 <section class="section agency-section" id="agency" aria-labelledby="agency-title" data-section="5">
-  <div class="agency-surface"><div class="agency-main"><span class="section-kicker"><span class="kicker-index">04</span><span>Почему «Прогресс»</span></span><h2 id="agency-title">На вашей стороне.<br> От первого вопроса<br> до продления ДМС</h2><p>Мы — страховое агентство. Подбираем решение под интересы вашей компании и помогаем взаимодействовать со страховщиком.</p><div class="agency-cost"><strong>Бесплатно</strong><span>подбор и сопровождение.<br> Вы оплачиваете только полис.</span></div></div>
-    <div class="agency-reasons"><article><span class="reason-number">01</span><div><h3>Один запрос — несколько предложений</h3><p>Обратимся к подходящим страховщикам и соберём варианты. Вам не придётся повторять задачу каждой компании.</p></div></article><article><span class="reason-number">02</span><div><h3>Сравнение, в котором всё понятно</h3><p>Сопоставим цену, клиники, услуги и ограничения. Объясним отличия, которые легко пропустить в условиях полиса.</p></div></article><article><span class="reason-number">03</span><div><h3>Поддержка после оформления</h3><p>Поможем с вопросами по договору, изменениями и спорными ситуациями со страховой компанией. В первую очередь — в ваших интересах.</p></div></article></div>
-  </div>
+  <div class="section-heading comparison-heading"><div><span class="section-kicker"><span class="kicker-index">04</span><span>Почему «Прогресс»</span></span><h2 id="agency-title">Напрямую в страховую<br> или через «Прогресс»?</h2></div><p class="section-intro">Сравните, как устроены выбор программы и сопровождение договора.</p></div>
+  <div class="comparison-table-wrap"><table class="agency-comparison"><caption class="sr-only">Сравнение самостоятельного обращения в страховую компанию и подбора ДМС через агентство Прогресс</caption><colgroup><col class="comparison-criteria-col"><col><col></colgroup><thead><tr><th scope="col">Что сравниваем</th><th scope="col">Напрямую<br>в страховую компанию</th><th scope="col" class="progress-cell"><span class="comparison-brand"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>С агентством «Прогресс»</span><small>Один запрос — несколько предложений</small></th></tr></thead><tbody>
+    <tr><th scope="row">Выбор программ</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Программы выбранной страховой компании.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Варианты нескольких подходящих страховщиков под ваши задачи.</td></tr>
+    <tr><th scope="row">Сравнение условий</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Предложения других компаний запрашиваете и сопоставляете сами.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Сравним цену, клиники, услуги, лимиты и исключения.</td></tr>
+    <tr><th scope="row">Подготовка договора</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Согласуете условия и документы с выбранной страховой.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Поможем согласовать программу и пройти оформление.</td></tr>
+    <tr><th scope="row">После подключения</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Обращаетесь в службу поддержки своего страховщика.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Менеджер помогает со списком сотрудников, изменениями, продлением и спорными вопросами.</td></tr>
+    <tr><th scope="row">Что оплачиваете</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Страховой полис на условиях страховой компании.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Страховой полис. Наш подбор и сопровождение — <strong>бесплатно</strong>.</td></tr>
+  </tbody></table></div>
+  <div class="comparison-after"><p>Полис выпускает выбранная страховая компания.<br>«Прогресс» помогает с подбором и сопровождением.</p><button class="button-primary" type="button" data-open-lead data-context="agency" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
 </section>
 
 <section class="section process-section" id="process" aria-labelledby="process-title" data-section="6">
