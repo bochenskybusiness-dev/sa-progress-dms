@@ -20,13 +20,14 @@ function validateInput(input){
     if(!/^[+\d\s().-]+$/.test(value)||digits.length<10||digits.length>15)message='Проверьте номер телефона';
   }
   if(input.name==='employees'&&value&&(!Number.isInteger(Number(value))||Number(value)<1||Number(value)>100000))message='Укажите целое число от 1 до 100 000';
+  if(input.name==='policy_ack'&&!input.checked)message='Подтвердите ознакомление с политиками';
   setError(input,message);
   return !message;
 }
 document.querySelectorAll('[data-lead-form]').forEach(form=>{
   form.addEventListener('submit',event=>{
     event.preventDefault();
-    const fields=[...form.querySelectorAll('input')].filter(input=>['name','phone','employees'].includes(input.name));
+    const fields=[...form.querySelectorAll('input')].filter(input=>['name','phone','employees','policy_ack'].includes(input.name));
     const invalid=fields.filter(input=>!validateInput(input));
     if(invalid.length){invalid[0].focus();return;}
     returnFocus=leadDialog?.open?returnFocus:form.querySelector('[type="submit"]');

@@ -289,7 +289,7 @@ html.has-open-dialog{overflow:hidden}
 
 
 /* Main-version annotations, 28 October 2026. */
-:root{--cta:#ff7a00;--cta-hover:#ef6b00;--cta-ink:#172d3b}
+:root{--cta:#ff7a00;--cta-hover:#ef6b00;--cta-ink:#fff}
 .button-primary{background:var(--cta);color:var(--cta-ink);font-weight:550;box-shadow:none}
 .button-primary:hover{background:var(--cta-hover)}
 .button-primary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
@@ -311,7 +311,7 @@ html.has-open-dialog{overflow:hidden}
 .hero-visual{align-self:center}
 .hero-photo{max-width:570px;margin-inline:auto}
 .hero-photo img{height:auto;object-fit:contain;object-position:center}
-.hero-proof{background:#0d4b79;border:0;border-radius:18px;padding:28px;margin-top:32px;gap:0}
+.hero-proof{background:var(--blue);border:0;border-radius:18px;padding:28px;margin-top:32px;gap:0}
 .hero-proof .proof-fact{display:flex;align-items:center;gap:19px;min-width:0;padding:0 27px;border-left:1px solid #ffffff30}
 .hero-proof .proof-fact:first-child{padding-left:0;border-left:0}
 .hero-proof .proof-fact:last-child{padding-right:0}
@@ -320,7 +320,7 @@ html.has-open-dialog{overflow:hidden}
 .hero-proof dt .proof-prefix{font-size:23px;font-weight:400;letter-spacing:0}
 .hero-proof dt .proof-plus{font-size:29px;vertical-align:8px;margin-left:3px}
 .hero-proof dt.proof-duration{font-size:28px;line-height:1.08;letter-spacing:-.035em}
-.hero-proof dd{font-size:12px;line-height:1.65;color:#dfecf5;margin:0;font-weight:350}
+.hero-proof dd{font-size:12px;line-height:1.65;color:#fff;margin:0;font-weight:350}
 
 /* Benefits are readable without opening three separate disclosures. */
 .benefits-heading{margin-bottom:30px}
@@ -1946,3 +1946,84 @@ html[data-review] .source-chrome-modals .hystmodal{top:54px;height:calc(100% - 5
 
 
 
+
+/* Local review: CTA endcaps and the page's position in the main site's hierarchy. */
+.form-consent{margin-top:16px;text-align:left}
+.form-consent .consent-label{display:flex;align-items:flex-start;gap:10px;margin:0;font-size:12px;line-height:1.6;font-weight:350;color:#3d4d57;cursor:pointer}
+.form-consent .consent-label>span{min-width:0}
+.form-consent .consent-label input[type=checkbox]{appearance:none;-webkit-appearance:none;display:block;position:static;flex:0 0 24px;width:24px;height:24px;min-height:0;max-width:none;margin:2px 0 0;padding:0;border:1.5px solid #34434d;border-radius:5px;background:#fff;box-shadow:none;cursor:pointer;opacity:1}
+.form-consent .consent-label input[type=checkbox]:checked{background:#0f6eb6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='m5 12 4 4L19 6' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat;border-color:#0f6eb6}
+.form-consent .consent-label input[type=checkbox]:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.form-consent .consent-label input[aria-invalid=true]{border-color:#b94128}
+.form-consent .consent-label a{color:var(--blue);text-decoration:none;text-underline-offset:3px}
+.form-consent .consent-label a:hover{text-decoration:underline}
+.form-consent .consent-label a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.consent-error{display:block;margin:6px 0 0 34px;color:#a93524;font-size:11px;line-height:1.5}
+.consent-error:empty{display:none}
+.button-primary.cta-button{padding:6px 6px 6px 18px;color:#fff;gap:14px;justify-content:space-between}
+.cta-button>.cta-endcap{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;margin:0;border-radius:10px;background:#fff;color:#ff7a00;pointer-events:none}
+.button-primary.cta-button>.cta-endcap>svg,.source-chrome .cta-button>.cta-endcap>svg{display:block;width:20px;height:20px;fill:none;stroke:#ff7a00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;color:#ff7a00;transform:none}
+.source-chrome .cta-button{padding:6px 6px 6px 18px;gap:14px;justify-content:space-between;color:#fff;min-height:56px;border-radius:9px;transition:background-color .2s ease}
+.source-chrome .callback-btn-desktop.cta-button{font-size:13px;white-space:nowrap}
+.source-chrome .callback-btn-desktop.cta-button>.cta-endcap{flex-basis:38px;width:38px;height:38px;border-radius:8px}
+.source-chrome .js-send-form.cta-button{background:var(--cta);font-size:14px}
+.source-chrome .js-send-form.cta-button:hover{background:var(--cta-hover)}
+.source-chrome .cta-button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.breadcrumbs{max-width:none;margin:0 auto;padding:20px 20px 0;color:#697c87;font-size:11px;font-weight:350;line-height:1.65}
+.breadcrumbs ol{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;list-style:none;margin:0;padding:0}
+.breadcrumbs li{display:inline-flex;align-items:baseline;gap:10px;min-width:0;white-space:nowrap}
+.breadcrumbs a{color:inherit;text-decoration:none;text-underline-offset:3px;transition:color .2s ease}
+.breadcrumbs a:hover{color:var(--blue);text-decoration:underline}
+.breadcrumbs a:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+.breadcrumbs [aria-current=page]{color:#3d5665}
+.breadcrumb-divider{color:#9aabb5}
+.breadcrumbs+.hero{padding-top:28px}
+
+
+
+  .breadcrumbs{padding-top:17px;font-size:10px;line-height:1.7}
+  .breadcrumbs ol{gap:4px 8px}
+  .breadcrumbs li{gap:8px}
+  .breadcrumbs+.hero{padding-top:24px}
+
+
+
+/* Second local review: a compact hero form and an editorial comparison table. */
+.hero-photo{width:108%;max-width:650px;margin-left:-4%;margin-right:-4%}
+.comparison-table-wrap{border:1px solid #c8dbe9;border-radius:20px 20px 0 0;box-shadow:0 16px 42px #173e5d0a}
+.agency-comparison thead th{background:#edf0f3;color:#304653;padding:30px 28px;font-size:19px;line-height:1.5;border-bottom:0}
+.agency-comparison thead th:first-child{color:#647580;font-size:12px;letter-spacing:.02em;font-weight:400}
+.agency-comparison thead th.progress-cell{background:var(--blue);padding-left:28px}
+.comparison-brand{gap:12px;font-weight:550}
+.comparison-brand .icon{width:34px;height:34px;padding:7px;box-sizing:border-box;border:1px solid #ffffff66;border-radius:50%;flex-shrink:0;stroke-width:2}
+.agency-comparison thead small{margin:12px 0 0 46px;font-size:12px;line-height:1.6;color:#e4f2ff}
+.agency-comparison tbody th,.agency-comparison tbody td{padding:24px 28px;border-bottom:1px solid #d9e5ee;line-height:1.8}
+.agency-comparison tbody th{font-size:14px;font-weight:500;background:#f4f8fb;color:#193e57}
+.agency-comparison tbody td{background:#fff;color:#566e7f;font-size:14px}
+.agency-comparison tbody td.progress-cell{position:relative;background:#eef6fd;color:#173b54;border-left:1px solid #d9e5ee;padding-left:62px;font-weight:400}
+.agency-comparison tbody td.progress-cell::before{content:"";position:absolute;left:24px;top:27px;width:24px;height:24px;border-radius:50%;background:#dbeefa url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='m7 12 3 3 7-7' stroke='%230f6eb6' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/24px no-repeat}
+.agency-comparison tbody tr:nth-child(even) th{background:#edf3f8}
+.agency-comparison tbody tr:nth-child(even) td:not(.progress-cell){background:#fafcfe}
+.agency-comparison tbody tr:nth-child(even) td.progress-cell{background:#e7f2fc}
+.agency-comparison tbody td strong{font-weight:650}
+.comparison-after{margin-top:0;padding:23px 28px;background:#f5f9fc;border:1px solid #c8dbe9;border-top:0;border-radius:0 0 20px 20px;box-shadow:0 20px 42px #173e5d08}
+.comparison-after p{color:#36556a;font-size:13px}
+
+
+
+  .hero-photo{width:100%;max-width:none;margin-inline:0}
+  .comparison-table-wrap{border-radius:16px 16px 0 0}
+  .agency-comparison tbody th{padding:16px 18px;font-size:14px;background:#eaf2f8;border-bottom:1px solid #d1e0ec}
+  .agency-comparison tbody td{padding:18px 16px;font-size:13px;line-height:1.75}
+  .agency-comparison tbody td.progress-cell{padding:18px 16px;border-left-width:1px}
+  .agency-comparison tbody td.progress-cell::before{left:14px;top:17px;width:19px;height:19px;background-size:19px}
+  .progress-cell .comparison-mobile-label{padding-left:24px;min-height:19px}
+  .comparison-mobile-label{margin-bottom:11px;font-size:10px}
+  .agency-comparison tbody tr:first-child th{border-radius:15px 15px 0 0}
+  .agency-comparison tbody tr:last-child td:nth-child(2),.agency-comparison tbody tr:last-child td:last-child{border-radius:0}
+  .comparison-after{padding:20px 18px;border-radius:0 0 16px 16px;gap:17px}
+  .comparison-after p{font-size:12px}
+
+
+/* The heading now follows the breadcrumbs directly on every device. */
+.hero h1{margin-top:0}

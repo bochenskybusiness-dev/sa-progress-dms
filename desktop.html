@@ -9,14 +9,45 @@
   <title>ПК 1440 — ДМС Прогресс</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./assets/fonts/Geologica-Variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./previews/desktop.css?v=c7bc6a3e8c2a">
-  <link rel="stylesheet" href="./assets/vendor/lenis/lenis.css?v=c7bc6a3e8c2a">
-  <script src="./assets/vendor/lenis/lenis.min.js?v=c7bc6a3e8c2a" defer></script>
-  <script src="./scroll.js?v=c7bc6a3e8c2a" defer></script>
-  <script src="./app.js?v=c7bc6a3e8c2a" defer></script>
-  <script src="./assets/vendor/hystmodal/hystmodal.js?v=c7bc6a3e8c2a" defer></script>
-  <script src="./site-chrome.js?v=c7bc6a3e8c2a" defer></script>
-<link rel="stylesheet" href="./review.css?v=c7bc6a3e8c2a"><script src="./review.js?v=c7bc6a3e8c2a" defer></script></head>
+  <link rel="stylesheet" href="./previews/desktop.css?v=850263bdbdf3">
+  <link rel="stylesheet" href="./assets/vendor/lenis/lenis.css?v=850263bdbdf3">
+  <script src="./assets/vendor/lenis/lenis.min.js?v=850263bdbdf3" defer></script>
+  <script src="./scroll.js?v=850263bdbdf3" defer></script>
+  <script src="./app.js?v=850263bdbdf3" defer></script>
+  <script src="./assets/vendor/hystmodal/hystmodal.js?v=850263bdbdf3" defer></script>
+  <script src="./site-chrome.js?v=850263bdbdf3" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://sa-progress.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Юридическим лицам",
+      "item": "https://sa-progress.ru/yuridicheskim-liczam/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Жизнь и здоровье",
+      "item": "https://sa-progress.ru/yuridicheskim-liczam/mediczina/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "ДМС для юридических лиц"
+    }
+  ]
+}
+  </script>
+<link rel="stylesheet" href="./review.css?v=850263bdbdf3"><script src="./review.js?v=850263bdbdf3" defer></script></head>
 <body><div class="review-toolbar"><a class="review-brand" href="./index.html" title="Открыть обычную адаптивную страницу">Прогресс <span>/ предпросмотр</span></a><nav aria-label="Формат предпросмотра"><a href="./desktop.html" aria-current="page">ПК<span>1440 px</span></a><a href="./tablet.html">Планшет<span>768 px</span></a><a href="./mobile.html">Телефон<span>390 px</span></a></nav><button id="review-scale" type="button" aria-pressed="false">Масштаб 100%</button></div><div class="review-stage"><div class="review-canvas">
   <div class="source-chrome source-chrome-header"><header class="header">
     <div class="content-wrapper">
@@ -51,7 +82,7 @@
             </li>
 </ul>        </nav>
         <div class="callback-btn__wrapper">
-            <button class="callback-btn-desktop" data-hystmodal="#feedback-form-short">Заказать звонок</button>
+            <button class="callback-btn-desktop cta-button" data-hystmodal="#feedback-form-short"><span>Заказать звонок</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button>
             <a class="callback-btn-mobile" href="tel:88006005253">
                 <img class="callback-btn-mobile__img" src="./assets/original-site/img/icons/callback.png" alt="callback">
             </a>
@@ -840,26 +871,33 @@
     </header></div>
 
   <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="https://sa-progress.ru/">Главная</a><span class="breadcrumb-divider" aria-hidden="true">/</span></li>
+        <li><a href="https://sa-progress.ru/yuridicheskim-liczam/">Юридическим лицам</a><span class="breadcrumb-divider" aria-hidden="true">/</span></li>
+        <li><a href="https://sa-progress.ru/yuridicheskim-liczam/mediczina/">Жизнь и здоровье</a><span class="breadcrumb-divider" aria-hidden="true">/</span></li>
+        <li><span aria-current="page">ДМС для юридических лиц</span></li>
+      </ol>
+    </nav>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>ДМС для юридических лиц</div>
         <h1 id="hero-title">ДМС, которое<br>подходит вашей<br><span>команде</span></h1>
         <p class="hero-lead"><strong>Бесплатно</strong> подберём полис под задачи и бюджет бизнеса. Поможем с оформлением и будем с вами весь срок действия ДМС.</p>
-        <form class="hero-form" id="hero-form" data-lead-form novalidate aria-labelledby="hero-form-title">
-          <div class="hero-form-intro"><h2 id="hero-form-title">Получите предложения по ДМС</h2><p>Оставьте имя и телефон — обсудим задачи и бюджет.</p></div>
+        <form class="hero-form" id="hero-form" data-lead-form novalidate aria-label="Рассчитать стоимость ДМС">
           <div class="form-row">
             <label class="field"><span>Ваше имя</span><input name="name" id="hero-name" autocomplete="given-name" placeholder="Например, Анна" required maxlength="80" aria-describedby="name-error"><small class="field-error" id="name-error"></small></label>
             <label class="field"><span>Телефон</span><input name="phone" id="hero-phone" autocomplete="tel" inputmode="tel" type="tel" placeholder="+7 999 123-45-67" required maxlength="22" aria-describedby="phone-error"><small class="field-error" id="phone-error"></small></label>
-            <button class="button-primary" type="submit"><span>Рассчитать стоимость</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="button-primary cta-button" type="submit"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button>
           </div>
+          <div class="form-consent"><label class="consent-label"><input type="checkbox" name="policy_ack" id="hero-policy" required aria-describedby="hero-policy-error"><span>Ознакомлен с <a href="https://sa-progress.ru/assets/img/dok/politika-ispolzovaniya-fajlov-cookie.pdf" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a> и <a href="https://sa-progress.ru/assets/img/dok/politika-konfidenczialnosti.pdf" target="_blank" rel="noopener noreferrer">Политикой в отношении обработки персональных данных</a></span></label><small class="consent-error" id="hero-policy-error" aria-live="polite"></small></div>
         </form>
-        <button class="button-primary hero-mobile-cta" type="button" data-open-lead data-context="hero" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button class="button-primary cta-button hero-mobile-cta" type="button" data-open-lead data-context="hero" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button>
         <div class="hero-assurance">
           <span><svg viewBox="0 0 22 22" aria-hidden="true"><path d="m5 11 4 4 8-8"/></svg>Обращение ни к чему не обязывает</span>
         </div>
       </div>
       <div class="hero-visual">
-        <figure class="hero-photo"><img src="./assets/images/dms-medical-care.png" alt="Медицинский полис, стетоскоп и щит со знаком защиты" width="1254" height="1254" fetchpriority="high"></figure>
+        <figure class="hero-photo"><img src="./assets/images/dms-business-medical-transparent.png" alt="Корпоративное ДМС: портфель, экран с медицинскими символами, щит и калькулятор" width="1536" height="1024" fetchpriority="high"></figure>
       </div>
       <dl class="hero-proof" aria-label="Об агентстве">
         <div class="proof-fact"><dt><span class="proof-prefix">с</span> 2014</dt><dd>помогаем выбирать<br>страхование</dd></div>
@@ -870,7 +908,7 @@
     <section class="section audience-section" id="for-whom" aria-labelledby="audience-title" data-section="2">
   <div class="section-heading benefits-heading"><div><span class="section-kicker"><span class="kicker-index">01</span><span>Выгоды ДМС</span></span><h2 id="audience-title">Преимущества ДМС<br> для компании и сотрудников</h2></div><p class="section-intro">Соцпакет, медицинская помощь и понятный бюджет — с программой под задачи вашей команды.</p></div>
   <div class="benefits-grid">
-    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><span class="benefits-audience">Для бизнеса и HR</span></div><h3>Сильнее соцпакет</h3><p>ДМС дополняет предложение работодателя, помогает привлекать специалистов и поддерживать лояльность команды.</p></article>
+    <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><span class="benefits-audience">Для бизнеса и HR</span></div><h3>Сильный соцпакет</h3><p>ДМС дополняет предложение работодателя, помогает привлекать специалистов и поддерживать лояльность команды.</p></article>
     <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h13v4M3 7h17v14H5a2 2 0 0 1-2-2V7Zm17 5h-5v5h5M17 14.5h.01"/></svg></span><span class="benefits-audience">Для компании</span></div><h3>Управляемый бюджет</h3><p>Выбираете состав услуг и уровень клиник под свои задачи. Стоимость программы известна до оформления.</p></article>
     <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a4 4 0 0 0 8 0V3M4 3h4M12 3h4M10 13v3a5 5 0 0 0 10 0v-3"/><circle cx="20" cy="11" r="2"/></svg></span><span class="benefits-audience">Для сотрудников</span></div><h3>Помощь в удобных клиниках</h3><p>Врачи, анализы и диагностика рядом с работой или домом. Запись через сервисы страховщика; услуги в рамках полиса оплачивает страховая.</p></article>
     <article class="benefits-card"><div class="benefits-card-top"><span class="benefits-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 19 12-14"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><span class="benefits-audience">Для финансовой службы</span></div><h3>Налоговые возможности</h3><p>Учёт расходов на ДМС и освобождение от страховых взносов — при соблюдении условий договора и НК РФ.</p></article>
@@ -917,7 +955,7 @@
       <label><input type="checkbox" name="service" value="Стационар"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h14v17M3 21h18M9 8h6M12 5v6M8 14h2M14 14h2M10 21v-4h4v4"/></svg>Стационар<i aria-hidden="true"></i></span></label>
       <label><input type="checkbox" name="service" value="Помощь на дому"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M12 11v6M9 14h6"/></svg>Врач на дом<i aria-hidden="true"></i></span></label>
       <label><input type="checkbox" name="service" value="Телемедицина"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M12 8v6M9 11h6M11 19h2"/></svg>Телемедицина<i aria-hidden="true"></i></span></label>
-    </fieldset><div class="builder-summary"><span id="service-count" aria-live="polite">Выбрано: 2</span><span>Окончательный состав согласуем вместе</span></div><button class="button-primary" type="button" data-open-lead data-context="price"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </fieldset><div class="builder-summary"><span id="service-count" aria-live="polite">Выбрано: 2</span><span>Окончательный состав согласуем вместе</span></div><button class="button-primary cta-button" type="button" data-open-lead data-context="price"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button></div>
   </div>
 </section>
 
@@ -930,13 +968,13 @@
     <tr><th scope="row">После подключения</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Обращаетесь в службу поддержки своего страховщика.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Менеджер помогает со списком сотрудников, изменениями, продлением и спорными вопросами.</td></tr>
     <tr><th scope="row">Что оплачиваете</th><td><span class="comparison-mobile-label" aria-hidden="true">Напрямую</span>Страховой полис на условиях страховой компании.</td><td class="progress-cell"><span class="comparison-mobile-label" aria-hidden="true">С «Прогрессом»</span>Страховой полис. Наш подбор и сопровождение — <strong>бесплатно</strong>.</td></tr>
   </tbody></table></div>
-  <div class="comparison-after"><p>Полис выпускает выбранная страховая компания.<br>«Прогресс» помогает с подбором и сопровождением.</p><button class="button-primary" type="button" data-open-lead data-context="agency" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  <div class="comparison-after"><p>Полис выпускает выбранная страховая компания.<br>«Прогресс» помогает с подбором и сопровождением.</p><button class="button-primary cta-button" type="button" data-open-lead data-context="agency" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button></div>
 </section>
 
 <section class="section process-section" id="process" aria-labelledby="process-title" data-section="6">
   <div class="section-heading"><div><span class="section-kicker"><span class="kicker-index">05</span><span>Как оформить</span></span><h2 id="process-title">Пять шагов.<br> И у команды есть ДМС</h2></div></div>
   <ol class="process-steps"><li><span class="step-number">01</span><h3>Знакомимся</h3><p>Уточняем численность, города, задачи и бюджет.</p></li><li><span class="step-number">02</span><h3>Ищем варианты</h3><p>Запрашиваем предложения подходящих страховщиков.</p></li><li><span class="step-number">03</span><h3>Сравниваем</h3><p>Разбираем стоимость, клиники, покрытие и ограничения.</p></li><li><span class="step-number">04</span><h3>Выбираем</h3><p>Согласовываем программу и условия договора.</p></li><li><span class="step-number">05</span><h3>Подключаем</h3><p>Помогаем оформить договор и передать сотрудникам инструкции.</p></li></ol>
-  <div class="process-after"><div class="process-promise"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 3v6c0 5-3 8-8 11-5-3-8-6-8-11V5l8-3Z"/><path d="m8 11 3 3 5-6"/></svg></span><p>После подключения остаёмся рядом — на весь срок действия полиса.</p></div><button class="button-primary" type="button" data-open-lead data-context="process" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  <div class="process-after"><div class="process-promise"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 3v6c0 5-3 8-8 11-5-3-8-6-8-11V5l8-3Z"/><path d="m8 11 3 3 5-6"/></svg></span><p>После подключения остаёмся рядом — на весь срок действия полиса.</p></div><button class="button-primary cta-button" type="button" data-open-lead data-context="process" aria-haspopup="dialog" aria-controls="lead-dialog"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button></div>
 </section>
 
 <section class="section trust-section" id="trust" aria-labelledby="trust-title" data-section="7">
@@ -963,7 +1001,7 @@
       <p class="scenario-description" id="scenario-description">Подберём программу с учётом задач вашей компании.</p>
       <div class="request-fields"><label class="field"><span>Ваше имя</span><input name="name" id="request-name" autocomplete="given-name" placeholder="Например, Анна" required maxlength="80" aria-describedby="request-name-error"><small class="field-error" id="request-name-error"></small></label><label class="field"><span>Телефон</span><input name="phone" id="request-phone" autocomplete="tel" inputmode="tel" type="tel" placeholder="+7 999 123-45-67" required maxlength="22" aria-describedby="request-phone-error"><small class="field-error" id="request-phone-error"></small></label><label class="field"><span>Город <i>необязательно</i></span><input name="city" autocomplete="address-level2" placeholder="Где работают сотрудники" maxlength="100"></label><label class="field"><span>Сотрудников <i>необязательно</i></span><input name="employees" type="number" inputmode="numeric" min="1" max="100000" placeholder="Например, 50" aria-describedby="employees-error"><small class="field-error" id="employees-error"></small></label></div>
       <div class="program-file" id="program-file" hidden><label for="policy-file"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7l-5-5Z M14 2v5h5M8 12h8M8 16h6"/></svg><span id="file-label">Прикрепить действующую программу<small>Необязательно · PDF, DOCX, XLSX · до 10 МБ</small></span><input id="policy-file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx"></label><p id="file-error" class="field-error" role="status"></p></div>
-      <button class="button-primary" type="submit"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><p class="request-reassurance">Обращение ни к чему не обязывает</p>
+      <button class="button-primary cta-button" type="submit"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button><div class="form-consent"><label class="consent-label"><input type="checkbox" name="policy_ack" id="request-policy" required aria-describedby="request-policy-error"><span>Ознакомлен с <a href="https://sa-progress.ru/assets/img/dok/politika-ispolzovaniya-fajlov-cookie.pdf" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a> и <a href="https://sa-progress.ru/assets/img/dok/politika-konfidenczialnosti.pdf" target="_blank" rel="noopener noreferrer">Политикой в отношении обработки персональных данных</a></span></label><small class="consent-error" id="request-policy-error" aria-live="polite"></small></div><p class="request-reassurance">Обращение ни к чему не обязывает</p>
     </form>
   </div>
 </section>
@@ -1275,7 +1313,7 @@
             <div class="wrapper">
                     
                 <button data-hystclose="" class="hystmodal__close"></button>
-                <form action="#" method="post" data-form-type="feedback-modal">
+                <form action="#" method="post" data-form-type="feedback-modal" novalidate>
     <div class="js-ajax-insert">
         <input type="hidden" name="url" value="https://sa-progress.ru/">
         <input type="hidden" name="pagetitle" value="Страхование любых рисков для физических и юридических лиц">
@@ -1289,21 +1327,8 @@
             <span class="input-error" data-error="name"></span>
         </div>
         
-        <div class="form-agreement-section js-form-agreement-section">
-    <div class="agreement-wrapper">
-        <div class="agreement-btn js-agreement-btn">
-            <img src="./assets/original-site/img/icons/checkbox-checked.png" alt="" class="checkbox-icon checked">
-            <img src="./assets/original-site/img/icons/checkbox-empty.png" alt="" class="checkbox-icon empty">
-        </div>
-        <div class="agreement-text">
-            Ознакомлен с <a class="link" href="https://sa-progress.ru/assets/img/dok/politika-ispolzovaniya-fajlov-cookie.pdf" target="_blank">Политикой использования файлов cookie</a> 
-            и <a class="link" href="https://sa-progress.ru/assets/img/dok/politika-konfidenczialnosti.pdf" target="_blank">Политикой в отношении обработки персональных данных</a>.
-        </div>    
-    </div>
-    <div class="agreement-error agreement-text">
-        Требуется согласие
-    </div>
-</div>        <button class="btn js-send-form">Перезвоните мне</button>
+        <button class="btn js-send-form cta-button" type="submit"><span>Перезвоните мне</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button>
+        <div class="form-consent"><label class="consent-label"><input type="checkbox" name="policy_ack" id="callback-policy" required aria-describedby="callback-policy-error"><span>Ознакомлен с <a href="https://sa-progress.ru/assets/img/dok/politika-ispolzovaniya-fajlov-cookie.pdf" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a> и <a href="https://sa-progress.ru/assets/img/dok/politika-konfidenczialnosti.pdf" target="_blank" rel="noopener noreferrer">Политикой в отношении обработки персональных данных</a></span></label><small class="consent-error" id="callback-policy-error" aria-live="polite"></small></div>
     </div>
 </form>            </div>
         </div>
@@ -1336,13 +1361,13 @@
     </div>
 </div></div>
 
-  <dialog id="lead-dialog" class="lead-dialog" aria-labelledby="lead-dialog-title"><button class="dialog-close" aria-label="Закрыть форму" type="button" data-close-dialog>×</button><span class="dialog-label">Подберём ДМС под вашу задачу</span><h2 id="lead-dialog-title">Начнём<br>с вашей команды</h2><p id="lead-context"></p><form data-lead-form novalidate><label class="field"><span>Ваше имя</span><input name="name" id="modal-name" placeholder="Например, Анна" autocomplete="given-name" required maxlength="80" aria-describedby="modal-name-error"><small class="field-error" id="modal-name-error"></small></label><label class="field"><span>Телефон</span><input name="phone" id="modal-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 999 123-45-67" required maxlength="22" aria-describedby="modal-phone-error"><small class="field-error" id="modal-phone-error"></small></label><button class="button-primary" type="submit"><span>Рассчитать стоимость</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><p class="request-reassurance">Обращение ни к чему не обязывает</p></form></dialog>
+  <dialog id="lead-dialog" class="lead-dialog" aria-labelledby="lead-dialog-title"><button class="dialog-close" aria-label="Закрыть форму" type="button" data-close-dialog>×</button><span class="dialog-label">Подберём ДМС под вашу задачу</span><h2 id="lead-dialog-title">Начнём<br>с вашей команды</h2><p id="lead-context"></p><form data-lead-form novalidate><label class="field"><span>Ваше имя</span><input name="name" id="modal-name" placeholder="Например, Анна" autocomplete="given-name" required maxlength="80" aria-describedby="modal-name-error"><small class="field-error" id="modal-name-error"></small></label><label class="field"><span>Телефон</span><input name="phone" id="modal-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 999 123-45-67" required maxlength="22" aria-describedby="modal-phone-error"><small class="field-error" id="modal-phone-error"></small></label><button class="button-primary cta-button" type="submit"><span>Рассчитать стоимость</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button><div class="form-consent"><label class="consent-label"><input type="checkbox" name="policy_ack" id="modal-policy" required aria-describedby="modal-policy-error"><span>Ознакомлен с <a href="https://sa-progress.ru/assets/img/dok/politika-ispolzovaniya-fajlov-cookie.pdf" target="_blank" rel="noopener noreferrer">Политикой использования файлов cookie</a> и <a href="https://sa-progress.ru/assets/img/dok/politika-konfidenczialnosti.pdf" target="_blank" rel="noopener noreferrer">Политикой в отношении обработки персональных данных</a></span></label><small class="consent-error" id="modal-policy-error" aria-live="polite"></small></div><p class="request-reassurance">Обращение ни к чему не обязывает</p></form></dialog>
   <dialog id="demo-dialog" aria-labelledby="demo-title" aria-describedby="demo-description">
     <button class="dialog-close" aria-label="Закрыть уведомление" type="button">×</button>
     <span class="dialog-label">Демонстрация формы</span>
     <h2 id="demo-title">Всё готово<br>для знакомства.</h2>
     <p id="demo-description">В рабочей версии менеджер свяжется с вами, уточнит задачи и подберёт варианты ДМС. Сейчас это макет для согласования: данные никуда не отправлены.</p>
-    <button class="button-primary dialog-done" type="button">Вернуться к странице <span aria-hidden="true">↗</span></button>
+    <button class="button-primary cta-button dialog-done" type="button"><span>Вернуться к странице</span><span class="cta-endcap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button>
   </dialog>
 </div></div></body>
 </html>

@@ -103,14 +103,11 @@
     }
   });
   const callbackForm=modals.querySelector('#feedback-form-short form');
-  const agreement=callbackForm.querySelector('.js-form-agreement-section');
-  const consent=agreement.querySelector('.js-agreement-btn');
-  keyboardButton(consent,'Ознакомлен с политиками');
-  consent.setAttribute('aria-pressed','false');
-  consent.addEventListener('click',()=>{
-    agreement.classList.toggle('checked');
-    consent.setAttribute('aria-pressed',String(agreement.classList.contains('checked')));
-    if(agreement.classList.contains('checked'))agreement.classList.remove('error');
+  const consent=callbackForm.elements.policy_ack;
+  const consentError=callbackForm.querySelector('.consent-error');
+  consent.addEventListener('change',()=>{
+    consent.setAttribute('aria-invalid',String(!consent.checked));
+    consentError.textContent=consent.checked?'':'Подтвердите ознакомление с политиками';
   });
   callbackForm.addEventListener('submit',event=>{
     event.preventDefault();
@@ -119,9 +116,10 @@
     const valid=/^[+\d\s().-]+$/.test(phone.value)&&phone.value.replace(/\D/g,'').length>=10&&phone.value.replace(/\D/g,'').length<=15;
     group.classList.toggle('error',!valid);
     group.querySelector('.input-label.error').textContent=valid?'':'Проверьте номер телефона';
-    agreement.classList.toggle('error',!agreement.classList.contains('checked'));
+    consent.setAttribute('aria-invalid',String(!consent.checked));
+    consentError.textContent=consent.checked?'':'Подтвердите ознакомление с политиками';
     if(!valid){phone.focus();return;}
-    if(!agreement.classList.contains('checked')){consent.focus();return;}
+    if(!consent.checked){consent.focus();return;}
     pendingDemo=header.querySelector('.callback-btn-desktop');
     originalModal.close();
   });
